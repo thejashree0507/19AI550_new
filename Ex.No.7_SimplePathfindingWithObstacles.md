@@ -1,6 +1,6 @@
 # Ex.No: 7  Implementation of Simple Pathfinding with Obstacles
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE:  01-11-2026                                                                          
+### REGISTER NUMBER : 212224240175
 ### AIM: 
 To write a program to pathfinding using AI navigation 
 ### Algorithm:
@@ -28,7 +28,7 @@ Go to: Inspector → Add Component → NavMeshObstacle and Check: ✅ "Carve"
 11. Run the program
 ```  
 ### Program:
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,7 +51,9 @@ public class AIPathfinder : MonoBehaviour
         agent.SetDestination(target.position);
     }
 }
+```
 #Moving Obstacle
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -80,13 +82,9 @@ float movement = Mathf.PingPong(Time.time * moveSpeed, moveDistance) - moveDista
 transform.position = startPos + new Vector3(movement, 0, 0);
 ### Output:
 
+<img width="1920" height="1200" alt="Screenshot (133)" src="https://github.com/user-attachments/assets/3944e786-be12-4aeb-8538-68e56e3a6788" />
 
-
-
-
-
-
-
+<img width="1920" height="1200" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/0f7f4587-c9a6-409f-a54d-cdfb513cc2e4" />
 
 ### Result:
 Thus the simple path finding  behavior was implemented using AI navigation successfully.
