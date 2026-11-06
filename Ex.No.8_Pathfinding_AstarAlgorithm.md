@@ -1,6 +1,6 @@
 # Ex.No: 8  Implementation of Path finding using A* algorithm
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 06-11-2026                                                                           
+### REGISTER NUMBER : 212224240175
 ### AIM: 
 To write a program to create graph using waypoints and use A* algorithm to find path between source and destination.
 ### Algorithm:
@@ -16,8 +16,8 @@ To write a program to create graph using waypoints and use A* algorithm to find 
 8. Create a Game Object for Player ( choose capsule or any others) and attach the script to move player from start to end waypoints
 ```  
 ### Program:
-```
 **#1.Waypoint.cs**
+```c#
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -34,17 +34,21 @@ public class Waypoint : MonoBehaviour {
         }
     }
 }
+```
 **#2. WaypointGraph.cs**
+```c# 
 using UnityEngine;
 
 public class WaypointGraph : MonoBehaviour {
     public Waypoint[] allWaypoints;
 
     void Awake() {
-        allWaypoints = FindObjectsOfType<Waypoint>();
+        allWaypoints = FindObjectsByType<Waypoint>(FindObjectsSortMode.None);
     }
 }
+```
 **#3.Pathfinding.cs**
+```c#
 using System.Collections.Generic;
 using UnityEngine;
 public class Pathfinding : MonoBehaviour {
@@ -103,8 +107,9 @@ public class Pathfinding : MonoBehaviour {
         return path;
     }
 }
-
+```
 **#4.AICharacter.cs**
+```c#
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -131,15 +136,20 @@ public class AICharacter : MonoBehaviour {
         }
     }
 }
+```
 Check the following
 1. Waypoints placed in scene
 2. Neighbors set manually via Inspector
 3. WaypointGraph script on a manager
 4. AICharacter assigned a start and goal
+
 ### Output:
 
+<img width="1920" height="1200" alt="Screenshot (140)" src="https://github.com/user-attachments/assets/f4d36f79-38c3-4d97-bf46-af92bb1c2d01" />
 
+<img width="1920" height="1200" alt="Screenshot (141)" src="https://github.com/user-attachments/assets/efa512de-915e-4645-b353-ae6cb9df3d95" />
 
+<img width="1920" height="1200" alt="Screenshot (142)" src="https://github.com/user-attachments/assets/9b186f7a-4f42-4152-8d7b-44156c9bad0e" />
 
 
 
